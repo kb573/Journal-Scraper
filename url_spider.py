@@ -2,7 +2,8 @@ import scrapy
 
 class url_spider(scrapy.Spider):
     name = 'url_spider'
-    start_urls = ['https://ideas.repec.org/s/aea/aecrev.html']
+    start_urls = ['https://ideas.repec.org/s/aea/aecrev.html',
+                ]
 
     def parse(self, response):
         for panel in response.css('div.panel-body'):
